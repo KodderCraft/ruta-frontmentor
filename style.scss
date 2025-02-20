@@ -1,0 +1,143 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+$color-crema: hsl(30, 38%, 92%);
+
+body {
+    background-color: $color-crema ;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color:  hsl(0, 0%, 100%);
+    width: 600px;
+    height: auto;
+    min-height: 450px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 7px;
+    .card_imgen{
+        border-radius: 7px 0 0 7px;
+        width: 50%;
+        height: auto;
+        background-image: url("./images/image-product-desktop.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    .card_info{
+        width: 50%;
+        height: auto;
+        padding: 7px 40px 18px 35px;
+        
+        h3{
+            font-size: 14px;
+            color: hsl(228, 12%, 48%);
+            font-weight: 500;
+            // font-family: 'Fraunces';
+            letter-spacing: 3px;
+        }
+        h1{
+            font-size: 32px;
+            color: hsl(212, 21%, 14%);
+            font-weight: 700;
+            font-family: 'Fraunces';
+        }
+        p{
+            font-size: 1rem;
+            color: hsl(228, 12%, 48%);
+            font-weight: 500;
+            line-height: 29px;
+            
+        }
+        .card_info_price{
+            color: hsl(158, 36%, 37%);
+            margin-top: 20px;
+    
+            h2{
+                font-size: 30px;
+                font-weight: 700;
+                position: relative;
+                font-family: 'Fraunces';
+                
+            }
+            h2::after{
+                position: absolute;
+                content: "$169.99";
+                display: " ";
+                top: 4px;
+                font-size: 14px;
+                font-weight: 500;
+                width: 30px;
+                height: 2px;
+                color: hsl(228, 12%, 48%);
+                margin-left: 8px;
+                text-decoration: line-through;
+            }
+            button{
+                width: 100%;
+                
+                background-color: hsl(158, 36%, 37%);
+                color:  hsl(0, 0%, 100%);
+                font-size: 1rem;
+                font-weight: 700;
+                padding: 15px 20px;
+                border-radius: 8px;
+                cursor: pointer;
+                img{
+                    padding-right: 7px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 395px) {
+
+    .card {
+        
+        width: 80%;
+        min-width: 343px;
+
+        
+        display: flex;
+        flex-direction: column;
+        .card_imgen{
+            
+            width: 343px;
+            height: 343px;
+            
+            background-image: url("./images/image-product-mobile.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .card_info{
+    
+            width: auto;
+            .card_info_price{
+                margin-bottom:10px;
+            }
+        }
+    }
+}
+
+.attribution{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 13px;
+    
+}
